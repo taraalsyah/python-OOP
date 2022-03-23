@@ -11,6 +11,7 @@ class Bank(User):
     def __init__(self,nama,umur,gender):
         super().__init__(nama,umur,gender)
         self.balance = 0
+        self.history = []
     def deposit(self,amount):
         self.balance = self.balance + amount
         print('account balance has been update=', self.balance)
@@ -24,13 +25,17 @@ class Bank(User):
         self.ShowInfo()
         print('account balance has been update=', self.balance)
         
+    def histori(self):
+        for i in self.history:
+            print(i)
+            
 nama = input('Masukan usernama=')
 umur = input('Masukan umur=')
 gender = input('Masukan gender=')
 user = Bank(nama,umur,gender)
 
 while True:
-    options = int(input('1. details\n2. deposit\n3. withdraw\n4. view balance\n5. Exit\n'))
+    options = int(input('1. details\n2. deposit\n3. withdraw\n4. view balance\n5. History\n6. Exit\n''))
     if options == 1:
         user.ShowInfo()
     elif options == 2:
@@ -41,6 +46,8 @@ while True:
         user.withdraw(draw)
     elif options ==4:
         user.view_balance()
-    elif options ==5:
+    elif options == 5:
+        user.histori()
+    elif options ==6:
         print('exit')
         break
