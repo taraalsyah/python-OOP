@@ -4,3 +4,7 @@
 # -Menabung dan menambahkan jumlah deposit tabungan.
 # -Menarik atau mengurangi jumlah deposit tabungan.
 # -Merecord transaksi user(history)
+# Tekhnik =
+# -class
+# -method
+# -inheritance
