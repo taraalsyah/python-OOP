@@ -8,3 +8,4 @@
 # -class
 # -method
 # -inheritance
+# -logika if
